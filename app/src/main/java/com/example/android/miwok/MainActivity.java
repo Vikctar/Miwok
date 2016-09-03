@@ -15,8 +15,10 @@
  */
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,5 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the view that shows the phrases category
         TextView phrases = (TextView) findViewById(R.id.phrases);
+    }
+
+    /**
+     * This method is called when the numbers text view is clicked
+     */
+    public void openNumbersList(View view) {
+        Intent intent = new Intent(this, Numbers.class);
+        startActivity(intent);
     }
 }
