@@ -15,8 +15,10 @@
  */
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,17 +34,74 @@ public class MainActivity extends AppCompatActivity {
         TextView numbers = (TextView) findViewById(R.id.numbers);
 
         // Set a click listener for the view
-        numbers.setOnClickListener(new NumbersEventListener());
+        assert numbers != null;
+        numbers.setOnClickListener(new View.OnClickListener() {
+            // The code to execute when the text view is clicked on
+            @Override
+            public void onClick(View v) {
+                // Create a new Intent to open {@link NumbersActivity}
+                Intent numbersIntent = new Intent(getApplicationContext(), NumbersActivity.class);
+
+                // Start the new activity
+                startActivity(numbersIntent);
+
+            }
+        });
 
 
         // Find the view that shows the family members category
         TextView family = (TextView) findViewById(R.id.family);
 
+        // Set a click listener for the view
+        assert family != null;
+        family.setOnClickListener(new View.OnClickListener() {
+            // The code to execute when the text view is clicked on
+            @Override
+            public void onClick(View v) {
+                // Create a new Intent to open {@link FamilyActivity}
+                Intent familyIntent = new Intent(getApplicationContext(), FamilyActivity.class);
+
+                // Start the new activity
+                startActivity(familyIntent);
+
+            }
+        });
+
         // Find the view that shows the colors category
         TextView colors = (TextView) findViewById(R.id.colors);
 
+        // Set a click listener for the view
+        assert colors != null;
+        colors.setOnClickListener(new View.OnClickListener() {
+            // The code to execute when the text view is clicked on
+            @Override
+            public void onClick(View v) {
+                // Create a new Intent to open {@link ColorsActivity}
+                Intent colorsIntent = new Intent(getApplicationContext(), ColorsActivity.class);
+
+                // Start the new activity
+                startActivity(colorsIntent);
+
+            }
+        });
+
         // Find the view that shows the phrases category
         TextView phrases = (TextView) findViewById(R.id.phrases);
+
+        // Set a click listener for the view
+        assert phrases != null;
+        phrases.setOnClickListener(new View.OnClickListener() {
+            // The code to execute when the text view is clicked on
+            @Override
+            public void onClick(View v) {
+                // Create a new Intent to open {@link PhrasesActivity}
+                Intent phrasesIntent = new Intent(getApplicationContext(), PhrasesActivity.class);
+
+                // Start the new activity
+                startActivity(phrasesIntent);
+
+            }
+        });
     }
 
 }
