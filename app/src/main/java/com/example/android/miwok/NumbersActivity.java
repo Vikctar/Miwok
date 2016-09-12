@@ -32,12 +32,27 @@ public class NumbersActivity extends AppCompatActivity {
 
         LinearLayout rootView = (LinearLayout) findViewById(R.id.root_view);
 
-        for (int index = 0; index < words.size(); index++) {
+        /*for (int index = 0; index < words.size(); index++) {
             // Create a new TextView
             TextView wordView = new TextView(this);
 
             // Set the text to be word at current index
             wordView.setText(words.get(index));
+
+            // Add the TextView as a child to the rootView of the layout
+            // Make sure the rootView is not null
+            if (rootView != null) {
+                rootView.addView(wordView);
+            }
+        } */
+
+        for (String word : words
+                ) {
+            // Create a new TextView
+            TextView wordView = new TextView(this);
+
+            // Set the text to be word at current index
+            wordView.setText(word);
 
             // Add the TextView as a child to the rootView of the layout
             // Make sure the rootView is not null
