@@ -12,7 +12,7 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
 
         // Create an ArrayList words that stores Strings
@@ -39,7 +39,7 @@ public class NumbersActivity extends AppCompatActivity {
         /**
          * Find the {@link android.widget.ListView} object in the view hierarchy of the {@link android.app.Activity}.
          * There should be a {@link android.widget.ListView} with the view ID called list (root_view), which is declared in the
-         * activity_numbers.xml layout file.
+         * word_list.xml file.
          */
         ListView listView = (ListView) findViewById(R.id.list_view);
 
