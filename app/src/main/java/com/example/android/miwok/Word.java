@@ -36,6 +36,20 @@ public class Word {
     }
 
     /**
+     * Create a new Word object.
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with
+     *                           (such as English)
+     * @param miwokTranslation   is the word in the Miwok language
+     * @param imageResourceId    is the drawable resource ID for the image associated with the word
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+        this.defaultTranslation = defaultTranslation;
+        this.miwokTranslation = miwokTranslation;
+        this.imageResourceId = imageResourceId;
+    }
+
+    /**
      * Get the translation
      *
      * @return default translation
