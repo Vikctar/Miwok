@@ -19,6 +19,11 @@ public class Word {
     private String miwokTranslation;
 
     /**
+     * Audio resource ID
+     */
+    private int audioResourceId;
+
+    /**
      * Image resource id for the word
      */
     private int imageResourceId = NO_IMAGE_PROVIDED;
@@ -34,10 +39,12 @@ public class Word {
      * @param defaultTranslation is the word in a language that the user is already familiar with
      *                           (such as English).
      * @param miwokTranslation   is the word in the Miwok language
+     * @param audioResourceId is the resource ID for the audio file associated with this word
      */
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
         this.defaultTranslation = defaultTranslation;
         this.miwokTranslation = miwokTranslation;
+        this.audioResourceId = audioResourceId;
     }
 
     /**
@@ -47,11 +54,13 @@ public class Word {
      *                           (such as English)
      * @param miwokTranslation   is the word in the Miwok language
      * @param imageResourceId    is the drawable resource ID for the image associated with the word
+     * @param audioResourceId is the resource ID for the audio file associated with this word
      */
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId) {
         this.defaultTranslation = defaultTranslation;
         this.miwokTranslation = miwokTranslation;
         this.imageResourceId = imageResourceId;
+        this.audioResourceId = audioResourceId;
     }
 
     /**
@@ -84,5 +93,12 @@ public class Word {
      */
     public boolean hasImage() {
         return imageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+    /**
+     * @return the audio resource ID of the word
+     */
+    public int getAudioResourceId() {
+        return audioResourceId;
     }
 }
