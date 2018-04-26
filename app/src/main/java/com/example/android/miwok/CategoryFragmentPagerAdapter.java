@@ -28,7 +28,7 @@ import com.example.android.miwok.fragments.PhrasesFragment;
 /**
  * Provides the appropriate {@link Fragment} for a view pager.
  */
-public class CategoryFragmentPagerAdapter extends FragmentPagerAdapter {
+class CategoryFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 

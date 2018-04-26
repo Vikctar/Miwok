@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.android.miwok.R;
@@ -104,24 +103,24 @@ public class NumbersFragment extends Fragment {
         words.add(new Word("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
         words.add(new Word("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
 
-        /**
-         * Create a {@link WordAdapter}, whose data source is a list of {@link Word}s.
-         * The adapter knows how to create list items for each item in the list.
+        /*
+          Create a {@link WordAdapter}, whose data source is a list of {@link Word}s.
+          The adapter knows how to create list items for each item in the list.
          */
         WordAdapter wordAdapter = new WordAdapter(getContext(), words, R.color.category_numbers);
 
-        /**
-         * Find the {@link android.widget.ListView} object in the view hierarchy of the {@link android.app.Activity}.
-         * There should be a {@link android.widget.ListView} with the view ID called list (root_view), which is declared in the
-         * word_list.xml file.
+        /*
+          Find the {@link android.widget.ListView} object in the view hierarchy of the {@link android.app.Activity}.
+          There should be a {@link android.widget.ListView} with the view ID called list (root_view), which is declared in the
+          word_list.xml file.
          */
         ListView listView = rootView.findViewById(R.id.list_view);
 
-        /**
-         * Make the {@link ListView} use the {@link ArrayAdapter} created above, so that the
-         * {@link ListView} will display list items for each word in the list of words.
-         * Do this by calling the setAdapter method on the {@link ListView} object and pass in
-         * 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
+        /*
+          Make the {@link ListView} use the {@link ArrayAdapter} created above, so that the
+          {@link ListView} will display list items for each word in the list of words.
+          Do this by calling the setAdapter method on the {@link ListView} object and pass in
+          1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
          */
         if (listView != null) {
             listView.setAdapter(wordAdapter);

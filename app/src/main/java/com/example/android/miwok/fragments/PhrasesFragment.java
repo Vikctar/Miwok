@@ -88,7 +88,7 @@ public class PhrasesFragment extends Fragment {
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         // Create a list of words
-        final ArrayList<Word> words = new ArrayList<Word>();
+        final ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
         words.add(new Word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
         words.add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
@@ -100,16 +100,16 @@ public class PhrasesFragment extends Fragment {
         words.add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
         words.add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
-        /**
-         * Create a {@link WordAdapter}, whose data source is a list of {@link Word}s.
-         * The adapter knows how to create list items for each item in the list.
+        /*
+          Create a {@link WordAdapter}, whose data source is a list of {@link Word}s.
+          The adapter knows how to create list items for each item in the list.
          */
         WordAdapter wordAdapter = new WordAdapter(getContext(), words, R.color.category_phrases);
 
-        /**
-         * Find the {@link android.widget.ListView} object in the view hierarchy of the {@link android.app.Activity}.
-         * There should be a {@link android.widget.ListView} with the view ID called list (root_view), which is declared in the
-         * word_list.xml file.
+        /*
+          Find the {@link android.widget.ListView} object in the view hierarchy of the {@link android.app.Activity}.
+          There should be a {@link android.widget.ListView} with the view ID called list (root_view), which is declared in the
+          word_list.xml file.
          */
         ListView listView = rootView.findViewById(R.id.list_view);
 
