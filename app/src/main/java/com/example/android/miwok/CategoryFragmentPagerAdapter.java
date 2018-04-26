@@ -47,6 +47,12 @@ public class CategoryFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
+    public CharSequence getPageTitle(int position) {
+        String[] title = {"Numbers", "Family", "Colors", "Phrases"};
+        return title[position];
+    }
+
+    @Override
     public int getCount() {
         return 4;
     }
