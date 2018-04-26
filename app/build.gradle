@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 ext {
-    supportLibraryVersion = '26.0.2'
+    supportLibraryVersion = '26.1.0'
 }
 
 android {
@@ -24,6 +24,7 @@ android {
 }
 
 dependencies {
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile "com.android.support:appcompat-v7:$supportLibraryVersion"
